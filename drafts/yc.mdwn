@@ -4,15 +4,17 @@ author: Etienne Millon
 tags: yc, cloverfeed
 ---
 
-Y Combinator is a seed accelerator for startups located in San Francisco Bay
-Area. Put simply, the Bay Area is the best place to start a technology startup
-and YC is the best accelerator there.
+Some context: Y Combinator is a seed accelerator for startups located in San 
+Francisco Bay Area. Put simply, the Bay Area is arguably the best place to 
+start a technology startup (because of the easy access to venture capitalist 
+money), and YC is the best accelerator there.
 
 Since 2010, I have been working on and off with my friend [Gabriel Synnaeve] on
-a product that could become a company. The idea is that we receive data everyday
-from a lot of sources, and a lot are not directly relevant to you. Our goal is
-to aggregate this feeds and sort them according to how likely you're going to
-read them. Our pitch became the following:
+a product that we first wanted to have for ourselves. The core observation is 
+that we receive a lot of data everyday from numerous sources, and a sizable 
+chunk of it is not directly relevant to you. So we set off to aggregate these
+"feeds" (starting by hacker news) and sort them according to how likely we were
+going to read them, at a given time of the day. Our pitch became the following:
 
 > [Cloverfeed] is a website and a mobile application to rank and filter entries
 > from all your feeds: RSS, Facebook, Twitter, social news… It's like a spam
@@ -30,52 +32,50 @@ would both have graduated and officially on the job market. The perfect time to
 start a company.
 
 Getting into YC is a two-step process. First, you have to fill an application
-form that explains who you are, what you are going to work on, and why you'll
-succeed. Then, you're invited to present your project at Y Combinator
-headquarters in California. If the interview goes well you're invited to work
-[at YC] on your product.
+form that explains who you are, what you are going to work on, and why you will
+succeed. Then, you are invited to present your project at Y Combinator
+headquarters in California. If the interview goes well, they invest seed money 
+and you pack your bags for three intensive months [at YC] to focus on your 
+product.
 
 ### The application
 
 [Here][YC App] is our application for YC W13, with some parts redacted.
 
-Some questions are straightforward, but others are quite tough to answer.
+Due to the fact that startups are hard (not only technically but all accross 
+the board), the team is central factor of failure and success in startups. And,
+indeed, YC focuses a lot on it. Two/three persons are considered the best: solo
+founding is [harder][PG Startup Mistakes] too many persons mean that the 
+probability to have a conflict between the founders is higher.
 
-One of the important things that you will want to convey is that your group will
-stick together.
-
-Indeed, YC focuses a lot in the fact that groups of two persons are the best:
-solo founders are [usually a bad signal][PG Startup Mistakes] and more than two
-persons mean that there can be a conflict between the founders and that majority
-can lead to bad decisions and bad feelings.
-
-Because being 2 is so important, finding a co-founder is a problem with some
-people, and the application is the first place where YC partners will be able to
-assess the strength.
-
-We think that for us it's not a problem as we've known each other for a long
-time and have worked together already, but still conveying that takes some work.
+Because finding a co-founder is so important, it is a problem in iteself for
+some people, and the application is the first place where YC partners will be 
+able to assess this. We think that for us, though, it is not a problem as we 
+have known been friends for quite a long time and we have worked together (at 
+school and as freelances) already. Still, conveying that takes some work.
 
 The other important point is to show that you're working on an interesting
-problem, ie one that is [desirable, buildable and profitable][Bruce Sterling
+problem, i.e. one that is [desirable, buildable and profitable][Bruce Sterling
 NEXT13]. Desirable means that the problem exists. Buildable means that the ones
 that are affected by the problem can become your clients. Profitable means that
 you will be able to pay your bills with this problem.
 
-In parallel to the application, we started to build a prototype. Our goal was to
-have an MVP by December, between the interview and YC itself. We used the
-following stack:
+So we decided that it was the right time to scratch our itch, we initialized a 
+git repo for our prototype, and started hacking. We answered the questions of 
+the applications and recorded the ["team intro" video][Application Video] one 
+night at Gabriel's place (around Belgium beers). Our goal was to have an MVP by 
+December, between the interview and YC itself. We used the following stack:
 
   - web backend: pyramid
   - ORM: sqlalchemy, alembic
   - DB: postgresql, sqlite
   - frontend: bootstrap, deform
   - queueing: celery, rabbitmq
-  - ML backend: clojure, tika, scikit-learn
+  - ML backend: clojure, tika, python, gensim
   - infrastructure: EC2
 
 Mostly things we were comfortable with, but assembling stuff together is always
-challenging :)
+challenging. :)
 
 ### The interview
 
@@ -99,5 +99,6 @@ for this user
 [YC App]: yc/app.html
 [PG Startup Mistakes]: http://www.paulgraham.com/startupmistakes.html
 [Bruce Sterling NEXT13]: http://nearfuturelaboratory.com/2011/11/13/weekending-11132011/
+[Application Video]: http://www.youtube.com/watch?v=FsIvR_lqs1c
 [Cloverfeed inbox, sorted]: http://i.imgur.com/Q9tVx.png
 [Cloverfeed inbox, unsorted]: http://i.imgur.com/uHJda.png
